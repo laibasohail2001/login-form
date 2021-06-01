@@ -10,15 +10,28 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        
        appBar: AppBar(
+         backgroundColor: Colors.pink[900],
          title: Center(child: Text("LOGIN PAGE"),),),
-         body: Center(
+         body: 
+         
+         Center(
+           
            child: Column(
              children: [
                SizedBox(height: 50,),
                Container(
                  width: 200,
                  child: TextField(
+                   decoration: InputDecoration(
+                     enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.pink[900]),
+                     borderRadius: BorderRadius.all(Radius.circular(30))
+                     ),
+                     focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.pink[900]),
+                     borderRadius: BorderRadius.all(Radius.circular(30))
+                     ),
+                     ),
 
                  ),
                  
@@ -27,15 +40,31 @@ class MyApp extends StatelessWidget {
                 Container(
                  width: 200,
                  child: TextField(
+                   decoration: InputDecoration(
+                     enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.pink[900]),
+                     borderRadius: BorderRadius.all(Radius.circular(30))
+                     ),
+                     focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.pink[900]),
+                     borderRadius: BorderRadius.all(Radius.circular(30))
+                     ),
+                     ),
+                     
+
                    
                  ),
                  
                ),
                SizedBox(height: 30,),
-               ElevatedButton(onPressed: (){}, child: Text("LOGIN"),)
-             ],)
-           ,),
+               ElevatedButton(onPressed: (){}, 
+               child: Text("LOGIN") ,
+               style: ElevatedButton.styleFrom(primary: Colors.pink[900])
+             ),
+             ], 
+           ),
+           
       ),
+      backgroundColor: Colors.pink[100],
+    ),
     );
   }
 }
